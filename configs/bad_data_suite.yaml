@@ -1,0 +1,24 @@
+dataset_name: bad_customers
+
+data_source:
+  type: csv
+  path: data/bad_customers.csv
+
+expectations:
+
+  - type: expect_column_to_not_be_null
+    column: name
+
+  - type: expect_column_values_to_be_unique
+    column: customer_id
+
+  - type: expect_column_values_to_be_between
+    column: age
+    min_value: 18
+    max_value: 100
+
+  - type: expect_column_values_to_be_in_set
+    column: gender
+    values:
+      - Male
+      - Female

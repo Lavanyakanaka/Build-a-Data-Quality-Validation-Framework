@@ -1,0 +1,4 @@
+customer_id,name,age,gender
+1,Alice,25,Female
+1,Bob,150,Male
+3,,30,Unknown
